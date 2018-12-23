@@ -1,0 +1,151 @@
+ubuntu@SLAVE2:~/Hadoop/hadoop-2.7.3/share/hadoop/mapreduce$ yarn jar hadoop-mapreduce-examples-2.7.3.jar pi 3 1000
+Number of Maps  = 3
+Samples per Map = 1000
+Wrote input for Map #0
+Wrote input for Map #1
+Wrote input for Map #2
+Starting Job
+18/12/21 16:34:55 INFO client.RMProxy: Connecting to ResourceManager at /172.31.2.252:8032
+18/12/21 16:34:55 WARN hdfs.DFSClient: Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1252)
+	at java.lang.Thread.join(Thread.java:1326)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:609)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:370)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:546)
+18/12/21 16:34:55 INFO input.FileInputFormat: Total input paths to process : 3
+18/12/21 16:34:55 INFO mapreduce.JobSubmitter: number of splits:3
+18/12/21 16:34:55 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1545410059008_0001
+18/12/21 16:34:56 INFO impl.YarnClientImpl: Submitted application application_1545410059008_0001
+18/12/21 16:34:56 INFO mapreduce.Job: The url to track the job: http://MASTER:8088/proxy/application_1545410059008_0001/
+18/12/21 16:34:56 INFO mapreduce.Job: Running job: job_1545410059008_0001
+18/12/21 16:35:02 INFO mapreduce.Job: Job job_1545410059008_0001 running in uber mode : false
+18/12/21 16:35:02 INFO mapreduce.Job:  map 0% reduce 0%
+18/12/21 16:35:06 INFO mapreduce.Job: Task Id : attempt_1545410059008_0001_m_000000_0, Status : FAILED
+Container [pid=5006,containerID=container_1545410059008_0001_01_000002] is running beyond virtual memory limits. Current usage: 65.6 MB of 512 MB physical memory used; 2.6 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_1545410059008_0001_01_000002 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 5022 5006 5006 5006 (java) 60 5 2746269696 16045 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000002/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000002 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000000_0 2 
+	|- 5006 5003 5006 5006 (bash) 0 0 13635584 759 /bin/bash -c /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN  -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000002/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000002 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000000_0 2 1>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000002/stdout 2>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000002/stderr  
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/12/21 16:35:07 INFO mapreduce.Job: Task Id : attempt_1545410059008_0001_m_000001_0, Status : FAILED
+Container [pid=4996,containerID=container_1545410059008_0001_01_000003] is running beyond virtual memory limits. Current usage: 65.0 MB of 512 MB physical memory used; 2.6 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_1545410059008_0001_01_000003 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 4996 4994 4996 4996 (bash) 0 0 13635584 753 /bin/bash -c /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN  -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000003/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000003 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000001_0 3 1>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000003/stdout 2>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000003/stderr  
+	|- 5009 4996 4996 4996 (java) 60 5 2744012800 15895 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000003/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000003 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000001_0 3 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/12/21 16:35:07 INFO mapreduce.Job: Task Id : attempt_1545410059008_0001_m_000002_0, Status : FAILED
+Container [pid=4999,containerID=container_1545410059008_0001_01_000004] is running beyond virtual memory limits. Current usage: 66.3 MB of 512 MB physical memory used; 2.6 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_1545410059008_0001_01_000004 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 5011 4999 4999 4999 (java) 71 5 2744344576 16206 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000004/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000004 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000002_0 4 
+	|- 4999 4997 4999 4999 (bash) 0 0 13635584 776 /bin/bash -c /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN  -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000004/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000004 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000002_0 4 1>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000004/stdout 2>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000004/stderr  
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/12/21 16:35:09 INFO mapreduce.Job: Task Id : attempt_1545410059008_0001_m_000000_1, Status : FAILED
+Container [pid=5083,containerID=container_1545410059008_0001_01_000005] is running beyond virtual memory limits. Current usage: 73.8 MB of 512 MB physical memory used; 2.6 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_1545410059008_0001_01_000005 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 5087 5083 5083 5083 (java) 113 7 2751119360 18119 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000005/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000005 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000000_1 5 
+	|- 5083 5081 5083 5083 (bash) 0 0 13635584 779 /bin/bash -c /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN  -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000005/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000005 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000000_1 5 1>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000005/stdout 2>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000005/stderr  
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/12/21 16:35:12 INFO mapreduce.Job: Task Id : attempt_1545410059008_0001_m_000000_2, Status : FAILED
+Container [pid=5114,containerID=container_1545410059008_0001_01_000008] is running beyond virtual memory limits. Current usage: 141.5 MB of 512 MB physical memory used; 2.7 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_1545410059008_0001_01_000008 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 5114 5112 5114 5114 (bash) 0 0 13635584 762 /bin/bash -c /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN  -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000008/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000008 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000000_2 8 1>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000008/stdout 2>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000008/stderr  
+	|- 5118 5114 5114 5114 (java) 287 20 2835312640 35457 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000008/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000008 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_m_000000_2 8 
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/12/21 16:35:16 INFO mapreduce.Job:  map 67% reduce 0%
+18/12/21 16:35:18 INFO mapreduce.Job:  map 100% reduce 0%
+18/12/21 16:35:18 INFO mapreduce.Job: Task Id : attempt_1545410059008_0001_r_000000_0, Status : FAILED
+Container [pid=5163,containerID=container_1545410059008_0001_01_000012] is running beyond virtual memory limits. Current usage: 74.4 MB of 512 MB physical memory used; 2.6 GB of 1.0 GB virtual memory used. Killing container.
+Dump of the process-tree for container_1545410059008_0001_01_000012 :
+	|- PID PPID PGRPID SESSID CMD_NAME USER_MODE_TIME(MILLIS) SYSTEM_TIME(MILLIS) VMEM_USAGE(BYTES) RSSMEM_USAGE(PAGES) FULL_CMD_LINE
+	|- 5163 5161 5163 5163 (bash) 0 0 13635584 777 /bin/bash -c /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN  -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000012/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000012 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog -Dyarn.app.mapreduce.shuffle.logger=INFO,shuffleCLA -Dyarn.app.mapreduce.shuffle.logfile=syslog.shuffle -Dyarn.app.mapreduce.shuffle.log.filesize=0 -Dyarn.app.mapreduce.shuffle.log.backups=0 org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_r_000000_0 12 1>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000012/stdout 2>/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000012/stderr  
+	|- 5167 5163 5163 5163 (java) 108 10 2750345216 18267 /usr/lib/jvm/java-8-openjdk-amd64/bin/java -Djava.net.preferIPv4Stack=true -Dhadoop.metrics.log.level=WARN -Xmx1024m -Djava.io.tmpdir=/home/ubuntu/hdfstmp/nm-local-dir/usercache/ubuntu/appcache/application_1545410059008_0001/container_1545410059008_0001_01_000012/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/home/ubuntu/Hadoop/hadoop-2.7.3/logs/userlogs/application_1545410059008_0001/container_1545410059008_0001_01_000012 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog -Dyarn.app.mapreduce.shuffle.logger=INFO,shuffleCLA -Dyarn.app.mapreduce.shuffle.logfile=syslog.shuffle -Dyarn.app.mapreduce.shuffle.log.filesize=0 -Dyarn.app.mapreduce.shuffle.log.backups=0 org.apache.hadoop.mapred.YarnChild 172.31.6.129 44143 attempt_1545410059008_0001_r_000000_0 12 
+	|- 5179 5167 5179 5179 (bash) 0 0 0 0 N/A
+
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+18/12/21 16:35:24 INFO mapreduce.Job:  map 100% reduce 100%
+18/12/21 16:35:24 INFO mapreduce.Job: Job job_1545410059008_0001 completed successfully
+18/12/21 16:35:24 INFO mapreduce.Job: Counters: 52
+	File System Counters
+		FILE: Number of bytes read=72
+		FILE: Number of bytes written=478789
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=804
+		HDFS: Number of bytes written=215
+		HDFS: Number of read operations=15
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=3
+	Job Counters 
+		Failed map tasks=5
+		Failed reduce tasks=1
+		Launched map tasks=8
+		Launched reduce tasks=2
+		Other local map tasks=5
+		Data-local map tasks=3
+		Total time spent by all maps in occupied slots (ms)=104088
+		Total time spent by all reduces in occupied slots (ms)=13108
+		Total time spent by all map tasks (ms)=26022
+		Total time spent by all reduce tasks (ms)=3277
+		Total vcore-milliseconds taken by all map tasks=26022
+		Total vcore-milliseconds taken by all reduce tasks=3277
+		Total megabyte-milliseconds taken by all map tasks=13323264
+		Total megabyte-milliseconds taken by all reduce tasks=1677824
+	Map-Reduce Framework
+		Map input records=3
+		Map output records=6
+		Map output bytes=54
+		Map output materialized bytes=84
+		Input split bytes=450
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=2
+		Reduce shuffle bytes=84
+		Reduce input records=6
+		Reduce output records=0
+		Spilled Records=12
+		Shuffled Maps =3
+		Failed Shuffles=0
+		Merged Map outputs=3
+		GC time elapsed (ms)=301
+		CPU time spent (ms)=1930
+		Physical memory (bytes) snapshot=993419264
+		Virtual memory (bytes) snapshot=11417530368
+		Total committed heap usage (bytes)=889716736
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=354
+	File Output Format Counters 
+		Bytes Written=97
+Job Finished in 29.589 seconds
+Estimated value of Pi is 3.14133333333333333333
+
