@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>
+
+<!-- Site specific YARN configuration properties -->
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <!-- Deklaracja do czego będzie wykorzystany YARN -->
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+  <!-- Typ platformy MapReduce -->
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>172.31.2.252</value>
+  </property>
+  <!-- Adres na którym działa RM -->
+  <property>
+    <name>yarn.resourcemanager.address</name>
+    <value>172.31.2.252:8032</value>
+  </property>
+  <!-- Adres i port na którym działa RM -->
+  <property>
+    <name>yarn.resourcemanager.scheduler.address</name>
+    <value>172.31.2.252:8030</value>
+  </property>
+  <!-- Adres planera zasobów -->
+  <property>
+    <name>yarn.resourcemanager.resource-tracker.address</name>
+    <value>172.31.2.252:8031</value>
+  </property>
+  <!-- Adres procesu sledzacego zasoby  -->
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>2048</value>
+  </property>
+<!-- Calkowita pamiec RAM na jednej maszynie -->
+  <property>
+    <name>yarn.nodemanager.resource.cpu-vcores</name>
+    <value>2</value>
+  </property>
+<!-- Istnieja tylko 2 wirtualne rdzenie wiec tylko tyle moze przydzielic YARN do kontenera-->
+  <property>
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>128</value>
+  </property>
+<!-- Minimalna dopuszczalna wartosc pamieci RAM kontenera -->
+  <property>
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>2048</value>
+  </property>
+<!-- Maksymalna dopuszczalna wartość pamięci RAM kontenera-->
+  <property>
+    <name>yarn.scheduler.increment-allocation-mb</name>
+    <value>128</value>
+  </property>
+  <!-- Rozmiar skoku, o który może wzrosnąć alokacja pamięci RAM dla kontenera-->
+  <property>
+    <name>yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage</name>
+    <value>99</value>
+  </property>
+  <!-- Mozliwosc zapelnienia 99% przestrzeni dyskowej na DataNode -->
+  <property>
+	<name>yarn.nodemanager.vmem-check-enabled</name>
+	<value>false</value>
+  </property>
+  <!-- Site specific YARN configuration properties -->
+</configuration>
